@@ -21,6 +21,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.statusstock.studyzone.Fragments.ForumFragment;
 import com.statusstock.studyzone.Fragments.HomeFragment;
 import com.statusstock.studyzone.Fragments.ProfileFragment;
 import com.statusstock.studyzone.Fragments.QuizFragment;
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
 
                         case R.id.navigation_more:
-                            fragment = new QuizFragment();
+                            fragment = new ForumFragment();
                             break;
                     }
 

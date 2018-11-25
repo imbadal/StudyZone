@@ -40,21 +40,19 @@
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
-
         <activity android:name=".QandA.Sub1Activity" />
         <activity android:name=".QandA.Sub2Activity" />
         <activity android:name=".QandA.Sub3Activity" />
         <activity android:name=".QandA.Sub4Activity" />
         <activity android:name=".QandA.Sub5Activity" />
         <activity android:name=".QandA.Sub6Activity" />
-
         <activity android:name=".Subjects.Sub1DetailsActivity" />
         <activity android:name=".Subjects.Sub2DetailsActivity" />
         <activity android:name=".Subjects.Sub3DetailsActivity" />
         <activity android:name=".Subjects.Sub4DetailsActivity" />
         <activity android:name=".Subjects.Sub5DetailsActivity" />
         <activity android:name=".Subjects.Sub6DetailsActivity" />
-
+        <activity android:name=".ForumActivity"></activity>
     </application>
 
 </manifest>

@@ -1,22 +1,18 @@
 package com.statusstock.studyzone.ViewHolder;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.statusstock.studyzone.R;
 
-public class ViewHolderNews extends RecyclerView.ViewHolder {
+public class ViewHolderForum extends RecyclerView.ViewHolder {
 
     public View mView;
     private ClickListener mClickListener;
 
 
-
-    public ViewHolderNews(final View itemView) {
+    public ViewHolderForum(final View itemView) {
         super(itemView);
 
         mView = itemView;
@@ -39,27 +35,29 @@ public class ViewHolderNews extends RecyclerView.ViewHolder {
 
     }
 
-    public void setTitle(String title) {
-        TextView news_title = (TextView) mView.findViewById(R.id.post_title_news);
-        news_title.setText(title);
+    public void setQsn(String text) {
+        TextView qsn = (TextView) mView.findViewById(R.id.qsn);
+        qsn.setText(text);
     }
 
-    public void setSports(String sports) {
-        TextView news_title = (TextView) mView.findViewById(R.id.sports);
-        news_title.setText(sports);
+    public void setDesc(String text) {
+        TextView desc = (TextView) mView.findViewById(R.id.desc);
+        desc.setText(text);
     }
 
-    public void setTime(String time) {
-        TextView news_title = (TextView) mView.findViewById(R.id.time);
-        news_title.setText(time);
+    public void setTime(String text) {
+        TextView time = (TextView) mView.findViewById(R.id.time);
+        time.setText(text);
     }
 
-    public void setImage(Context ctx, String image) {
-        ImageView post_image = (ImageView) mView.findViewById(R.id.bgImage);
-//        Picasso.with(ctx).load(image).resize(100,100).onlyScaleDown().into(post_image);
-        Glide.with(ctx).load(image).into(post_image);
+    public void setDate(String text) {
+        TextView date = (TextView) mView.findViewById(R.id.date);
+        date.setText(text);
+    }
 
-
+    public void setUFullName(String text) {
+        TextView name = (TextView) mView.findViewById(R.id.userFullName);
+        name.setText(text);
     }
 
     public void setOnclickListener(ClickListener clickListener) {
