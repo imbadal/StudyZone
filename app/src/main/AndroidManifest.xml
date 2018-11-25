@@ -15,37 +15,46 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <service android:name="com.statusstock.studyzone.MyFirebaseMessagingService">
+        <service android:name=".Notification.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.statusstock.studyzone.MyFirebaseInstanceIdService">
+        <service android:name=".Notification.MyFirebaseInstanceIdService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
-        <activity android:name="com.statusstock.studyzone.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.statusstock.studyzone.RegisterActivity" />
-        <activity android:name="com.statusstock.studyzone.LoginActivity" />
-        <activity android:name="com.statusstock.studyzone.SetUpActivity" />
-        <activity android:name="com.statusstock.studyzone.WebViewActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SetUpActivity" />
+        <activity android:name=".WebViewActivity" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
-        <activity android:name="com.statusstock.studyzone.Subjects.Sub1Activity" />
-        <activity android:name="com.statusstock.studyzone.Subjects.Sub2Activity" />
-        <activity android:name="com.statusstock.studyzone.Subjects.Sub3Activity" />
-        <activity android:name="com.statusstock.studyzone.Subjects.Sub4Activity" />
-        <activity android:name="com.statusstock.studyzone.Subjects.Sub5Activity" />
-        <activity android:name="com.statusstock.studyzone.Subjects.Sub6Activity" />
+
+        <activity android:name=".QandA.Sub1Activity" />
+        <activity android:name=".QandA.Sub2Activity" />
+        <activity android:name=".QandA.Sub3Activity" />
+        <activity android:name=".QandA.Sub4Activity" />
+        <activity android:name=".QandA.Sub5Activity" />
+        <activity android:name=".QandA.Sub6Activity" />
+
+        <activity android:name=".Subjects.Sub1DetailsActivity" />
+        <activity android:name=".Subjects.Sub2DetailsActivity" />
+        <activity android:name=".Subjects.Sub3DetailsActivity" />
+        <activity android:name=".Subjects.Sub4DetailsActivity" />
+        <activity android:name=".Subjects.Sub5DetailsActivity" />
+        <activity android:name=".Subjects.Sub6DetailsActivity" />
+
     </application>
 
 </manifest>

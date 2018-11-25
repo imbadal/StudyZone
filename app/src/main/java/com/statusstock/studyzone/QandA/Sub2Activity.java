@@ -1,4 +1,4 @@
-package com.statusstock.studyzone.Subjects;
+package com.statusstock.studyzone.QandA;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -16,11 +16,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.statusstock.studyzone.Model.Subject;
 import com.statusstock.studyzone.R;
-import com.statusstock.studyzone.Subject;
-import com.statusstock.studyzone.ViewHolderSubject;
+import com.statusstock.studyzone.ViewHolder.ViewHolderSubject;
 
-public class Sub4Activity extends AppCompatActivity {
+public class Sub2Activity extends AppCompatActivity {
 
     RecyclerView mRecyclerView;
     FirebaseDatabase mFirebaseDatabase;
@@ -31,25 +31,25 @@ public class Sub4Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sub4);
+        setContentView(R.layout.activity_sub2);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_view_Sub4);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_view_Sub2);
         toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Sub4");
+        getSupportActionBar().setTitle("Sub2");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
-        pb = findViewById(R.id.pro_Sub4);
-        mRecyclerView = findViewById(R.id.recyclerView_Sub4);
+        pb = findViewById(R.id.pro_Sub2);
+        mRecyclerView = findViewById(R.id.recyclerView_Sub2);
         mRecyclerView.setHasFixedSize(true);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mRef = mFirebaseDatabase.getReference("Sub4");
+        mRef = mFirebaseDatabase.getReference("Sub2");
 
         pb.setVisibility(View.VISIBLE);
 

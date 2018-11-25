@@ -1,5 +1,6 @@
 package com.statusstock.studyzone.Subjects;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -16,64 +17,72 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.statusstock.studyzone.Model.SubjectDetails;
 import com.statusstock.studyzone.R;
-import com.statusstock.studyzone.Subject;
-import com.statusstock.studyzone.ViewHolderSubject;
+import com.statusstock.studyzone.ViewHolder.ViewHolderSubjectDetails;
+import com.statusstock.studyzone.WebViewActivity;
 
-public class Sub2Activity extends AppCompatActivity {
+public class Sub1DetailsActivity extends AppCompatActivity {
 
     RecyclerView mRecyclerView;
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference mRef;
     ProgressBar pb;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sub2);
+        setContentView(R.layout.activity_sub1_details);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_view_Sub2);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_view_Sub1Details);
         toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Sub2");
+        getSupportActionBar().setTitle("Index");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
-        pb = findViewById(R.id.pro_Sub2);
-        mRecyclerView = findViewById(R.id.recyclerView_Sub2);
+        pb = findViewById(R.id.pro_Sub1Details);
+        mRecyclerView = findViewById(R.id.recyclerView_Sub1Details);
         mRecyclerView.setHasFixedSize(true);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mRef = mFirebaseDatabase.getReference("Sub2");
+        mRef = mFirebaseDatabase.getReference("Sub1Details");
 
         pb.setVisibility(View.VISIBLE);
 
 
-        FirebaseRecyclerAdapter<Subject, ViewHolderSubject> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Subject, ViewHolderSubject>(Subject.class, R.layout.row_subject, ViewHolderSubject.class, mRef) {
+        FirebaseRecyclerAdapter<SubjectDetails, ViewHolderSubjectDetails> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<SubjectDetails, ViewHolderSubjectDetails>(SubjectDetails.class, R.layout.row_subject_content, ViewHolderSubjectDetails.class, mRef) {
 
 
             @Override
-            protected void populateViewHolder(ViewHolderSubject viewHolderSubject, final Subject subject, int position) {
+            protected void populateViewHolder(ViewHolderSubjectDetails viewHolderSubjectDetails, final SubjectDetails subjectDetails, int position) {
 
-                viewHolderSubject.setQsn(subject.getQsn());
-                viewHolderSubject.setAns(subject.getAns());
-                viewHolderSubject.setNum(subject.getNum());
+                viewHolderSubjectDetails.setChapter(subjectDetails.getChapter());
 
+                viewHolderSubjectDetails.mView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        final String url = subjectDetails.getUrl();
+
+                        Intent intent = new Intent(getApplicationContext(), WebViewActivity.class);
+                        intent.putExtra("id", url);
+                        startActivity(intent);
+                    }
+                });
 
                 pb.setVisibility(View.GONE);
             }
 
             @Override
-            public ViewHolderSubject onCreateViewHolder(ViewGroup parent, int viewType) {
+            public ViewHolderSubjectDetails onCreateViewHolder(ViewGroup parent, int viewType) {
 
 
-                ViewHolderSubject viewHolderSubject = super.onCreateViewHolder(parent, viewType);
-                viewHolderSubject.setOnclickListener(new ViewHolderSubject.ClickListener() {
+                ViewHolderSubjectDetails viewHolderSubjectDetails = super.onCreateViewHolder(parent, viewType);
+                viewHolderSubjectDetails.setOnclickListener(new ViewHolderSubjectDetails.ClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
 
@@ -88,7 +97,7 @@ public class Sub2Activity extends AppCompatActivity {
                 });
 
 
-                return viewHolderSubject;
+                return viewHolderSubjectDetails;
             }
         };
 

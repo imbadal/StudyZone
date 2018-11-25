@@ -1,4 +1,4 @@
-package com.statusstock.studyzone;
+package com.statusstock.studyzone.ViewHolder;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,10 +7,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.statusstock.studyzone.R;
 
 public class ViewHolderNews extends RecyclerView.ViewHolder {
 
-    View mView;
+    public View mView;
     private ClickListener mClickListener;
 
 

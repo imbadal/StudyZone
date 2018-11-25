@@ -1,4 +1,4 @@
-package com.statusstock.studyzone;
+package com.statusstock.studyzone.Notification;
 
 import android.util.Log;
 

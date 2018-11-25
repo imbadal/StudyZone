@@ -1,4 +1,4 @@
-package com.statusstock.studyzone.Subjects;
+package com.statusstock.studyzone.QandA;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -16,9 +16,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.statusstock.studyzone.Model.Subject;
 import com.statusstock.studyzone.R;
-import com.statusstock.studyzone.Subject;
-import com.statusstock.studyzone.ViewHolderSubject;
+import com.statusstock.studyzone.ViewHolder.ViewHolderSubject;
 
 public class Sub5Activity extends AppCompatActivity {
 

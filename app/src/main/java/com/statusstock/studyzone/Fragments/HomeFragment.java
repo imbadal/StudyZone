@@ -1,4 +1,4 @@
-package com.statusstock.studyzone;
+package com.statusstock.studyzone.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +17,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.statusstock.studyzone.MainActivity;
+import com.statusstock.studyzone.Model.News;
+import com.statusstock.studyzone.R;
+import com.statusstock.studyzone.ViewHolder.ViewHolderNews;
+import com.statusstock.studyzone.WebViewActivity;
 
 public class HomeFragment extends android.support.v4.app.Fragment {
 
@@ -43,7 +48,7 @@ public class HomeFragment extends android.support.v4.app.Fragment {
         pb.setVisibility(View.VISIBLE);
 
 
-        FirebaseRecyclerAdapter<News, ViewHolderNews> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<News, ViewHolderNews>(News.class, R.layout.news_row, ViewHolderNews.class, mRef) {
+        FirebaseRecyclerAdapter<News, ViewHolderNews> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<News, ViewHolderNews>(News.class, R.layout.row_news, ViewHolderNews.class, mRef) {
 
 
             @Override
@@ -61,12 +66,9 @@ public class HomeFragment extends android.support.v4.app.Fragment {
                     public void onClick(View v) {
                         final String url = news.getUrl();
 
-
                         Intent intent = new Intent(getActivity().getApplicationContext(), WebViewActivity.class);
                         intent.putExtra("id", url);
                         startActivity(intent);
-
-
                     }
                 });
 

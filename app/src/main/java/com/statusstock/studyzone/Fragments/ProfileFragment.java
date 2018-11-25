@@ -1,4 +1,4 @@
-package com.statusstock.studyzone;
+package com.statusstock.studyzone.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,35 +9,36 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.statusstock.studyzone.Subjects.Sub1Activity;
-import com.statusstock.studyzone.Subjects.Sub2Activity;
-import com.statusstock.studyzone.Subjects.Sub3Activity;
-import com.statusstock.studyzone.Subjects.Sub4Activity;
-import com.statusstock.studyzone.Subjects.Sub5Activity;
-import com.statusstock.studyzone.Subjects.Sub6Activity;
+import com.statusstock.studyzone.R;
+import com.statusstock.studyzone.Subjects.Sub1DetailsActivity;
+import com.statusstock.studyzone.Subjects.Sub2DetailsActivity;
+import com.statusstock.studyzone.Subjects.Sub3DetailsActivity;
+import com.statusstock.studyzone.Subjects.Sub4DetailsActivity;
+import com.statusstock.studyzone.Subjects.Sub5DetailsActivity;
+import com.statusstock.studyzone.Subjects.Sub6DetailsActivity;
 
-public class QuizFragment extends android.support.v4.app.Fragment {
-
+public class ProfileFragment extends android.support.v4.app.Fragment {
 
     TextView sub1, sub2, sub3, sub4, sub5, sub6;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_quiz, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        sub1 = view.findViewById(R.id.sub1);
-        sub2 = view.findViewById(R.id.sub2);
-        sub3 = view.findViewById(R.id.sub3);
-        sub4 = view.findViewById(R.id.sub4);
-        sub5 = view.findViewById(R.id.sub5);
-        sub6 = view.findViewById(R.id.sub6);
+
+        sub1 = view.findViewById(R.id.sub_details1);
+        sub2 = view.findViewById(R.id.sub_details2);
+        sub3 = view.findViewById(R.id.sub_details3);
+        sub4 = view.findViewById(R.id.sub_details4);
+        sub5 = view.findViewById(R.id.sub_details5);
+        sub6 = view.findViewById(R.id.sub_details6);
 
 
         sub1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Sub1Activity.class);
+                Intent intent = new Intent(getActivity(), Sub1DetailsActivity.class);
                 startActivity(intent);
             }
         });
@@ -45,7 +46,7 @@ public class QuizFragment extends android.support.v4.app.Fragment {
         sub2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Sub2Activity.class);
+                Intent intent = new Intent(getActivity(), Sub2DetailsActivity.class);
                 startActivity(intent);
             }
         });
@@ -53,7 +54,7 @@ public class QuizFragment extends android.support.v4.app.Fragment {
         sub3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Sub3Activity.class);
+                Intent intent = new Intent(getActivity(), Sub3DetailsActivity.class);
                 startActivity(intent);
             }
         });
@@ -61,7 +62,7 @@ public class QuizFragment extends android.support.v4.app.Fragment {
         sub4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Sub4Activity.class);
+                Intent intent = new Intent(getActivity(), Sub4DetailsActivity.class);
                 startActivity(intent);
             }
         });
@@ -69,7 +70,7 @@ public class QuizFragment extends android.support.v4.app.Fragment {
         sub5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Sub5Activity.class);
+                Intent intent = new Intent(getActivity(), Sub5DetailsActivity.class);
                 startActivity(intent);
             }
         });
@@ -77,7 +78,7 @@ public class QuizFragment extends android.support.v4.app.Fragment {
         sub6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Sub6Activity.class);
+                Intent intent = new Intent(getActivity(), Sub6DetailsActivity.class);
                 startActivity(intent);
             }
         });

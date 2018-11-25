@@ -1,12 +1,14 @@
-package com.statusstock.studyzone;
+package com.statusstock.studyzone.ViewHolder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.statusstock.studyzone.R;
+
 public class ViewHolderSubject extends RecyclerView.ViewHolder {
 
-    View mView;
+    public View mView;
     private ClickListener mClickListener;
 
 

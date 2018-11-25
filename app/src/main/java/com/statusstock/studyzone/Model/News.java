@@ -1,4 +1,4 @@
-package com.statusstock.studyzone;
+package com.statusstock.studyzone.Model;
 
 public class News {
 
