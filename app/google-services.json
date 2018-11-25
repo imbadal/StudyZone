@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "973393277846",
+    "firebase_url": "https://studyzone-62ea5.firebaseio.com",
+    "project_id": "studyzone-62ea5",
+    "storage_bucket": "studyzone-62ea5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973393277846:android:501d27e15ac1c752",
+        "android_client_info": {
+          "package_name": "com.statusstock.studyzone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973393277846-sslb4fdur7uhu3frpvj90mp459fp6dt7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0mQ7BEk1O3OOgQidqGAiJhpJWKKomK7s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
