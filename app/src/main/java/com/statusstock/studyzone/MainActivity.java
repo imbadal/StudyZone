@@ -120,7 +120,10 @@ public class MainActivity extends AppCompatActivity {
         switch (menuItem.getItemId()) {
 
             case R.id.nav_profile:
-                Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(intent);
+
                 break;
 
             case R.id.nav_home:

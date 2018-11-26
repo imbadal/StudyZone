@@ -11,7 +11,7 @@
     <color name="colorCyan">#006281</color>
     <color name="colorBlack">#1b1b1b</color>
     <color name="colorLightBlack">#464646</color>
-    <color name="colorGray">#686868</color>
+    <color name="colorGray">#ababab</color>
     <color name="colorOrange">#ff4000</color>
     <color name="black_overlay">#66000000</color>
 </resources>
