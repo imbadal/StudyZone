@@ -2,24 +2,21 @@ package com.statusstock.studyzone.ViewHolder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.statusstock.studyzone.R;
 
-public class ViewHolderForum extends RecyclerView.ViewHolder {
+public class ViewHolderComment extends RecyclerView.ViewHolder {
 
-    public ImageView comment;
     public View mView;
     private ClickListener mClickListener;
 
 
-    public ViewHolderForum(final View itemView) {
+    public ViewHolderComment(final View itemView) {
         super(itemView);
 
         mView = itemView;
 
-        comment = itemView.findViewById(R.id.comment_button);
 
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,29 +36,25 @@ public class ViewHolderForum extends RecyclerView.ViewHolder {
 
     }
 
-    public void setQsn(String text) {
-        TextView qsn = (TextView) mView.findViewById(R.id.qsn);
-        qsn.setText(text);
+    public void setComment(String text) {
+        TextView comment = (TextView) mView.findViewById(R.id.comment);
+        comment.setText(text);
     }
 
-    public void setDesc(String text) {
-        TextView desc = (TextView) mView.findViewById(R.id.desc);
-        desc.setText(text);
-    }
 
     public void setTime(String text) {
-        TextView time = (TextView) mView.findViewById(R.id.time);
+        TextView time = (TextView) mView.findViewById(R.id.time_comment);
         time.setText(text);
     }
 
     public void setDate(String text) {
-        TextView date = (TextView) mView.findViewById(R.id.date);
+        TextView date = (TextView) mView.findViewById(R.id.date_comment);
         date.setText(text);
     }
 
-    public void setUFullName(String text) {
-        TextView name = (TextView) mView.findViewById(R.id.userFullName);
-        name.setText(text);
+    public void setUserName(String text) {
+        TextView name = (TextView) mView.findViewById(R.id.userFullName_comment);
+        name.setText("@" + text);
     }
 
     public void setOnclickListener(ClickListener clickListener) {

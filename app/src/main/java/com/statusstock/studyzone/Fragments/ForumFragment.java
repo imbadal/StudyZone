@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.statusstock.studyzone.CommentActivity;
 import com.statusstock.studyzone.ForumActivity;
 import com.statusstock.studyzone.MainActivity;
 import com.statusstock.studyzone.Model.Forum;
@@ -67,6 +68,8 @@ public class ForumFragment extends android.support.v4.app.Fragment {
             @Override
             protected void populateViewHolder(ViewHolderForum viewHolderForum, final Forum Forum, int position) {
 
+                final String postKey = getRef(position).getKey();
+
                 viewHolderForum.setQsn(Forum.getqsn());
                 viewHolderForum.setTime(Forum.getTime());
                 viewHolderForum.setDate(Forum.getDate());
@@ -77,6 +80,18 @@ public class ForumFragment extends android.support.v4.app.Fragment {
                 viewHolderForum.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
+                    }
+                });
+
+                viewHolderForum.comment.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent intent = new Intent(getActivity(), CommentActivity.class);
+                        intent.putExtra("postKey", postKey);
+                        startActivity(intent);
+
 
                     }
                 });

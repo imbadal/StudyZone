@@ -52,7 +52,8 @@
         <activity android:name=".Subjects.Sub4DetailsActivity" />
         <activity android:name=".Subjects.Sub5DetailsActivity" />
         <activity android:name=".Subjects.Sub6DetailsActivity" />
-        <activity android:name=".ForumActivity"></activity>
+        <activity android:name=".ForumActivity" />
+        <activity android:name=".CommentActivity"></activity>
     </application>
 
 </manifest>
