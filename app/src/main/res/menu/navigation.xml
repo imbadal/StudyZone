@@ -13,12 +13,12 @@
 
     <item
         android:id="@+id/navigation_headlines"
-        android:icon="@drawable/ic_widgets_black_24dp"
+        android:icon="@drawable/ic_book_black_24dp"
         android:title="Subjects" />
 
     <item
         android:id="@+id/navigation_more"
-        android:icon="@drawable/ic_more_vert_black_24dp"
+        android:icon="@drawable/ic_question_answer_black_24dp"
         android:title="Forum" />
 
 

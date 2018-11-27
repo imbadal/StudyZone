@@ -12,7 +12,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -124,26 +123,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                 startActivity(intent);
 
-                break;
-
-            case R.id.nav_home:
-                Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.nav_friends:
-                Toast.makeText(this, "Friends", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.nav_find_friends:
-                Toast.makeText(this, "Find Friends", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.nav_messages:
-                Toast.makeText(this, "Messages", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.nav_settings:
-                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.nav_logout:
