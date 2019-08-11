@@ -54,7 +54,8 @@
         <activity android:name=".Subjects.Sub6DetailsActivity" />
         <activity android:name=".ForumActivity" />
         <activity android:name=".CommentActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".CheckInActivity"></activity>
     </application>
 
 </manifest>

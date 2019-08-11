@@ -17,7 +17,7 @@ import com.statusstock.studyzone.Subjects.Sub4DetailsActivity;
 import com.statusstock.studyzone.Subjects.Sub5DetailsActivity;
 import com.statusstock.studyzone.Subjects.Sub6DetailsActivity;
 
-public class ProfileFragment extends android.support.v4.app.Fragment {
+public class ProfileFragment extends androidx.core.app.Fragment {
 
     TextView sub1, sub2, sub3, sub4, sub5, sub6;
 

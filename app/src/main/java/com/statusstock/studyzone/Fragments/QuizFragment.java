@@ -17,7 +17,7 @@ import com.statusstock.studyzone.QandA.Sub5Activity;
 import com.statusstock.studyzone.QandA.Sub6Activity;
 import com.statusstock.studyzone.R;
 
-public class QuizFragment extends android.support.v4.app.Fragment {
+public class QuizFragment extends androidx.core.app.Fragment {
 
 
     TextView sub1, sub2, sub3, sub4, sub5, sub6;

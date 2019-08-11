@@ -25,7 +25,7 @@ import com.statusstock.studyzone.Model.Forum;
 import com.statusstock.studyzone.R;
 import com.statusstock.studyzone.ViewHolder.ViewHolderForum;
 
-public class ForumFragment extends android.support.v4.app.Fragment {
+public class ForumFragment extends androidx.core.app.Fragment {
 
     RecyclerView mRecyclerView;
     FirebaseDatabase mFirebaseDatabase;

@@ -81,16 +81,10 @@ public class LoginActivity extends AppCompatActivity {
                 .build();
 
 
-
     }
 
 
-
-
-
-
-
-    @Override
+     @Override
     protected void onStart() {
         super.onStart();
 

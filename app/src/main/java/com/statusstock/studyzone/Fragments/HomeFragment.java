@@ -23,7 +23,7 @@ import com.statusstock.studyzone.R;
 import com.statusstock.studyzone.ViewHolder.ViewHolderNews;
 import com.statusstock.studyzone.WebViewActivity;
 
-public class HomeFragment extends android.support.v4.app.Fragment {
+public class HomeFragment extends androidx.core.app.Fragment {
 
     RecyclerView mRecyclerView;
     FirebaseDatabase mFirebaseDatabase;
@@ -48,7 +48,8 @@ public class HomeFragment extends android.support.v4.app.Fragment {
         pb.setVisibility(View.VISIBLE);
 
 
-        FirebaseRecyclerAdapter<News, ViewHolderNews> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<News, ViewHolderNews>(News.class, R.layout.row_news, ViewHolderNews.class, mRef) {
+        FirebaseRecyclerAdapter<News, ViewHolderNews> firebaseRecyclerAdapter =
+                new FirebaseRecyclerAdapter<News, ViewHolderNews>(News.class, R.layout.row_news, ViewHolderNews.class, mRef) {
 
 
             @Override
